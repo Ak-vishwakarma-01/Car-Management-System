@@ -1,24 +1,25 @@
-# Task Management API
+# Car Management System
 
-This is a Task Management application built using reactjs , Node.js, Express, and MongoDB. The API allows users to manage tasks, including creating, updating, deleting, and retrieving tasks. It also includes user authentication with JWT and provides routes for handling task-related operations.
+This is a Car Management application built using React.js, Node.js, Express, and MongoDB. The API allows users to manage cars, including creating, updating, deleting, and retrieving car information. It also includes user authentication with JWT and provides routes for handling car-related operations.
 
 ## Deployed Application
 You can access the deployed project here:  
-[User Interface](https://task-management-system-self.vercel.app/)
+[User Interface](https://car-management-system-lyart.vercel.app/)
 
 You can access the Backend API here:  
-[Backend API](https://tms-bakcen-api.onrender.com/)
+[Backend API](https://car-management-system-jlz6.onrender.com/)
 
 # Important thing to notice when you are running locally
-#### change the prefix of api key from every jsx and js file of frontend , change from `https://tms-bakcen-api.onrender.com/` to your local host for example this is my localhost `http://localhost:1000/`
+#### change the prefix of api key from every jsx and js file of frontend , change from `https://car-management-system-jlz6.onrender.com/` to your local host for example this is my localhost `http://localhost:1000/`
 
 ## Features
 
 - User authentication using JWT.
-- Task management (create, update, delete, get).
-- Filter tasks by complete or incomplete.
+- Car management (create, update, delete, retrieve).
+- Add and delete images for cars.
+- Filter important cars.
 - MongoDB as the database.
-- Deployed at the vercel for frontend and bakcend on render
+- Deployed on Vercel for the frontend and Render for the backend.
 
 ## API Endpoints
 
@@ -28,27 +29,26 @@ You can access the Backend API here:
 - **Log In**: `POST /api/v1/log-in`
   - Body: `{ username, password }`
 
-### Tasks
-- **Create**: `POST /api/v2/create-task`
+### Cars
+- **Create**: `POST /api/v2/add-car`
   - Headers: `id, authorization`
   - Body: `{ title, desc }`
-- **Get All**: `GET /api/v2/get-all-tasks`
+- **Get All**: `GET /api/v2/get-all-cars`
   - Headers: `id, authorization`
-- **Delete**: `DELETE /api/v2/delete-task/:id`
+- **Delete**: `DELETE /api/v2/delete-car/:id`
   - Headers: `id, authorization`
-- **Update**: `PUT /api/v2/update-task/:id`
+- **Update**: `PUT /api/v2/update-car/:id`
   - Headers: `id, authorization`
   - Body: `{ title, desc }`
 
-### Status
-- **Mark Complete**: `PUT /api/v2/update-complete-task/:id`
+### Images
+- **Create**: `POST /api/v3/add-image`
   - Headers: `id, authorization`
+  - Body: `{ title, desc }`
+- **Update**: `PUT /api/v3/update-image/:id`
+  - Headers: `id, authorization`
+  - Body: `{ title, desc }`
 
-### Filters
-- **Complete Tasks**: `GET /api/v2/get-complete-tasks`
-  - Headers: `id, authorization`
-- **Incomplete Tasks**: `GET /api/v2/get-incomplete-tasks`
-  - Headers: `id, authorization`
 
 ## Tech Stack
 
@@ -69,7 +69,7 @@ Before running the application, ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo-link.git](https://github.com/Ak-vishwakarma-01/Task-Management-System
+   git clone https://github.com/your-repo-link.git](https://github.com/Ak-vishwakarma-01/Car-Management-System
 
 
 ## How to run the project
