@@ -19,7 +19,7 @@ const SighnUp = () => {
       if(Data.username === "" || Data.email=== "" || Data.password === ""){
         alert("All fields are required")
       }else{
-        const response = await axios.post("http://localhost:1000/api/v1/sign-in",Data);
+        const response = await axios.post("https://car-management-system-jlz6.onrender.com/api/v1/sign-in",Data);
         setData({username:"",email:"",password:""})
         alert(response.data.message);
         navigate("/login");
@@ -30,7 +30,7 @@ const SighnUp = () => {
   }
   return (
     <div className="h-[98vh] flex items-center justify-center">
-      <div className="sm:w-2/6 md:w-2/6 lg:w-2/6 w-4/6 p-4 bg-blue-900 rounded flex flex-col items-center">
+      <div className="sm:w-2/6 md:w-2/6 lg:w-2/6 w-4/6 p-4 bg-slate-900 rounded flex flex-col items-center">
         <div className="text-2xl">SignUp</div>
         <input
         type="username" 
@@ -38,24 +38,24 @@ const SighnUp = () => {
         name="username"
         value={Data.username}
         onChange={change}
-        className="bg-blue-700 px-3 py-2 rounded my-3 w-full" />
+        className="bg-slate-700 px-3 py-2 rounded my-3 w-full" />
         <input
         type="email" 
         placeholder="xyz@example.com" 
         name="email"
         value={Data.email}
         onChange={change}
-        className="bg-blue-700 px-3 py-2 rounded my-3 w-full" />
+        className="bg-slate-700 px-3 py-2 rounded my-3 w-full" />
       <input
         type="password" 
         placeholder="password" 
         name="password"
         value={Data.password}
         onChange={change}
-        className="bg-blue-700 px-3 py-2 rounded my-3 w-full" />
+        className="bg-slate-700 px-3 py-2 rounded my-3 w-full" />
       <div className='w-full flex items-center justify-between'>
-            <button className="bg-blue-600 p-2 rounded my-3 " onClick={submit}>SignUp</button>
-            <Link to="/login" className="text-xs text-blue-400 hover:text-blue-200">Alrady registered? Login here</Link>
+            <button className="bg-slate-600 p-2 rounded my-3 " onClick={submit}>SignUp</button>
+            <Link to="/login" className="text-xs text-slate-400 hover:text-blue-200">Alrady registered? Login here</Link>
       </div>
       </div>
     </div>

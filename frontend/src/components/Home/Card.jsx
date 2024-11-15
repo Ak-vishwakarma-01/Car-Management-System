@@ -18,7 +18,7 @@ const Card = ({ home, setinputdiv, data, setUpdatedData }) => {
   const deleteCar = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:1000/api/v2/delete-car/${id}`,
+        `https://car-management-system-jlz6.onrender.com/api/v2/delete-car/${id}`,
         { headers }
       );
       console.log(response.data.message);

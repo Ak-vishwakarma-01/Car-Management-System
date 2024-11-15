@@ -15,7 +15,7 @@ const SearchCars = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get("http://localhost:1000/api/v2/get-all-cars", { headers });
+      const response = await axios.get("https://car-management-system-jlz6.onrender.com/api/v2/get-all-cars", { headers });
       const allCars = response.data.data.cars;
 
       const filteredCars = allCars.filter((car) => {

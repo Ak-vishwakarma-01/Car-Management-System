@@ -29,7 +29,7 @@ const InputData = ({ Inputdiv, setinputdiv, updatedData, setupdatedData }) => {
     } else {
       try {
         const response = await axios.post(
-          "http://localhost:1000/api/v2/add-car",
+          "https://car-management-system-jlz6.onrender.com/api/v2/add-car",
           Data,
           { headers }
         );
@@ -47,7 +47,7 @@ const InputData = ({ Inputdiv, setinputdiv, updatedData, setupdatedData }) => {
     } else {
       try {
         const response = await axios.put(
-          `http://localhost:1000/api/v2/update-car/${updatedData.id}`,
+          `https://car-management-system-jlz6.onrender.com/api/v2/update-car/${updatedData.id}`,
           Data,
           { headers }
         );

@@ -34,7 +34,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     const fetch = async()=>{
-      const response =  await axios.get("http://localhost:1000/api/v2/get-all-cars",{
+      const response =  await axios.get("https://car-management-system-jlz6.onrender.com/api/v2/get-all-cars",{
         headers,
       });
       setData(response.data.data);
